@@ -16,7 +16,10 @@ import {
 } from "@chakra-ui/react";
 import { HamburgerIcon, PhoneIcon, AddIcon, WarningIcon } from "@chakra-ui/icons";
 import { Link } from "react-scroll";
-import CardPages from "../CardPages/CardPages";
+import SignIn from "../CardPages/SignIn";
+import Login from "../CardPages/Login";
+import GuapZlogo from '../../assets/GuapZlogo.png'
+import Dashboard from "../Dashboard/Dashboard";
 
 
 
@@ -31,16 +34,17 @@ const Header = (props) => {
                 align="center"
                 justify="space-between"
                 wrap="wrap"
-                padding={6}
+                // padding={6}
                 bg="#084877"
                 color="white"
+                // height={20}00000
                 {...props}
             >
-                <Flex align="center" mr={5}>
+                <Flex >
                     {/* <Heading as="h1" size="lg" letterSpacing={"tighter"}>
                     Chakra UI
                 </Heading> */}
-                    <Image src='https://e7.pngegg.com/pngimages/287/216/png-clipart-black-and-red-wings-logo-illustration-logo-phoenix-art-phoenix-leaf-logo.png' h="50px" />
+                    <Image src={GuapZlogo} h="70px" />
                 </Flex>
 
                 <Box display={{ base: "block", md: "none" }} onClick={handleToggle}>
@@ -83,7 +87,7 @@ const Header = (props) => {
                     </Button>
                 </Box>
             </Flex>
-            <Box h={50} bg="red.100">
+            <Box h={50} bg="#f1f1f1">
                 <HStack justifyContent='center' alignItems='center'>
                     <Link>
                         <Button variant="nav">Icon-1</Button>
@@ -99,7 +103,10 @@ const Header = (props) => {
             </Box>
 
 
-            <CardPages />
+            {/* <SignIn /> */}
+            {/* <Login /> */}
+            <Dashboard />
+        
         </>
     );
 };
