@@ -4,15 +4,15 @@ import {
     Box, Stack, Heading, Flex, Text, View, FormLabel, Input, Button, FormControl, Image, HStack, CardHeader, Card, CardBody, CardFooter, Container, VStack,
 
     chakra,
-    Link,
     FormHelperText,
     InputGroup,
     InputLeftElement,
     InputRightElement
 } from "@chakra-ui/react";
 import { HamburgerIcon, ArrowRightIcon, AddIcon, WarningIcon } from "@chakra-ui/icons";
-
+import { Link } from 'react-router-dom';
 import { FaUserAlt, FaLock } from "react-icons/fa";
+
 
 const CFaUserAlt = chakra(FaUserAlt);
 const CFaLock = chakra(FaLock);
@@ -237,7 +237,12 @@ export default function Login() {
                     <Text>Status    </Text> */}
                     {/* <HStack   mt={20} alignContent="center" justifyContent="center"> */}
                     <VStack mt={20} >
-                        <Button colorScheme='teal' w={40}> <ArrowRightIcon />  <ArrowRightIcon /></Button>
+
+                        <Button colorScheme='teal' w={40}>
+                            <Link to="/dashboard">
+                                <ArrowRightIcon /><ArrowRightIcon />
+                            </Link>
+                        </Button>
                     </VStack>
                     {/* </HStack> */}
                 </Box>

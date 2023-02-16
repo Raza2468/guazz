@@ -4,6 +4,8 @@ import {
     Box, Stack, Heading, Flex, Text, View, FormLabel, Input, Button, FormControl, Image, HStack, CardHeader, Card, CardBody, CardFooter, Container, VStack
 } from "@chakra-ui/react";
 import { HamburgerIcon, ArrowRightIcon, AddIcon, WarningIcon } from "@chakra-ui/icons";
+import { Link } from 'react-router-dom';
+
 export default function CardPages() {
     return (
 
@@ -123,7 +125,11 @@ export default function CardPages() {
                     <Text>Status    </Text> */}
                     {/* <HStack   mt={20} alignContent="center" justifyContent="center"> */}
                     <VStack mt={10} >
-                        <Button colorScheme='teal' w={40}> <ArrowRightIcon />  <ArrowRightIcon /></Button>
+                        <Button colorScheme='teal' w={40}>
+                            <Link to="/login">
+                                <ArrowRightIcon />  <ArrowRightIcon />
+                            </Link>
+                        </Button>
                     </VStack>
                     {/* </HStack> */}
                 </Box>

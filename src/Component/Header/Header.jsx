@@ -15,7 +15,7 @@ import {
     CardFooter
 } from "@chakra-ui/react";
 import { HamburgerIcon, PhoneIcon, AddIcon, WarningIcon } from "@chakra-ui/icons";
-import { Link } from "react-scroll";
+import { Link } from "react-router-dom";
 import GuapZlogo from '../../assets/GuapZlogo.png'
 import SignIn from "../CardPages/SignIn";
 import Login from "../CardPages/Login";
@@ -67,8 +67,14 @@ const Header = (props) => {
                     <Link>
                         <Button variant="nav">Princing</Button>
                     </Link>
-                    <Link>
+                    <Link to="/login">
                         <Button variant="nav">Login</Button>
+                    </Link>
+                    <Link to="/portfolio">
+                        <Button variant="nav">portfolio</Button>
+                    </Link>
+                    <Link to="/twoCards">
+                        <Button variant="nav">Cards</Button>
                     </Link>
 
                 </Stack>
@@ -78,7 +84,7 @@ const Header = (props) => {
                     mt={{ base: 4, md: 0 }}
                 >
 
-                    <Link>
+                    <Link to="/login">
                         <Button variant="nav">Login</Button>
                     </Link>
                     <Button
@@ -109,8 +115,8 @@ const Header = (props) => {
             {/* <Login /> */}
             {/* <Dashboard /> */}
             {/* <Portfolio /> */}
-            <TwoCards />
-        
+            {/* // <TwoCards /> */}
+
         </>
     );
 };
