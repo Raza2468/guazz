@@ -4,7 +4,7 @@ import {
     Box, Stack, Wrap, Grid, Center, WrapItem, SimpleGrid, GridItem, Heading, Flex, Text, View, FormLabel, Input, Button, FormControl, Image, HStack, CardHeader, Card, CardBody, CardFooter, Container, VStack
 } from "@chakra-ui/react";
 import { HamburgerIcon, ArrowRightIcon, AddIcon, WarningIcon } from "@chakra-ui/icons";
-export default function Dashboard() {
+export default function TwoCards() {
     return (
 
         <Container
@@ -37,22 +37,15 @@ export default function Dashboard() {
                 width="100%"
                 minHeight="70vh"
                 rounded="md"
-                mt="7"
-                mb='7'
+                // mt="7"
+                // mb='7'
                 paddingTop='10%'
-
                 // m={10}
                 // maxW='xl'
                 // backgroundColor='#F6F6F6'
-                // backgroundColor='yellow.100'
-                // bgGradient='linear(to-t, #316489, #FFFFFF)'
-                bgGradient={[
-                    'linear(to-tr, teal.300, #FFFFFF)',
-                    'linear(to-t, #316489, teal.500)',
-                    'linear(to-b, #316489, #316489',
-                ]}
+                backgroundColor='#A7B3C2'
                 // alignItems="center"
-                color='black.100'
+                // color='black.100'
             // flex={1}
             // justifyContent="center"
             // justifyContent="space-evenly"
@@ -90,59 +83,51 @@ export default function Dashboard() {
 
                 <Wrap spacing='30px' align='center' justify='center'>
                     <WrapItem>
-                        <Center w='180px' h='80px' bg='red.200'>
-                            Box 1
-                        </Center>
+                        <Card
+                            backgroundColor="gray.100"
+                            height={80}
+                            borderRadius={20}
+                            boxShadow='xl'
+                        >
+                            <CardHeader >
+                                <Heading borderTopRadius={20} size='md' backgroundColor="#084877" height={20} color='white' textAlign="center" fontSize={25} fontWeight="bold">What is your target amount</Heading>
+                            </CardHeader>
+                            <CardBody>
+                                <Text>View a summary of all your customers over the last month.</Text>
+                            </CardBody>
+                            <CardFooter>
+                                <Button backgroundColor="blue.100">View here</Button>
+                            </CardFooter>
+                        </Card>
                     </WrapItem>
                     <WrapItem>
-                        <Center w='180px' h='80px' bg='green.200'>
-                            Box 2
-                        </Center>
-                    </WrapItem>
-                    <WrapItem>
-                        <Center w='180px' h='80px' bg='tomato'>
-                            Box 3
-                        </Center>
-                    </WrapItem>
-                    <WrapItem>
-                        <Center w='180px' h='80px' bg='blue.200'>
-                            Box 4
-                        </Center>
-                    </WrapItem>
-                    <WrapItem>
-                        <Center w='180px' h='80px' bg='blackAlpha.500'>
-                            Box 5
-                        </Center>
+                        <Card backgroundColor="gray.100"
+                            height={60}
+                            // borderRadius={20}
+                            boxShadow='xl'
+                        >
+                            {/* <CardHeader >
+                                <Heading borderTopRadius={20} size='md' backgroundColor="#084877" height={20} color='white' textAlign="center" fontSize={25} fontWeight="bold">Goals Base Tnvestment</Heading>
+                            </CardHeader> */}
+                            <CardBody>
+                                <Text>View a summary of all your customer</Text>
+                            </CardBody>
+                            {/* <CardFooter>
+                                <Button backgroundColor="blue.100">View here</Button>
+                            </CardFooter> */}
+                        </Card>
                     </WrapItem>
                 </Wrap>
 
-                <Wrap spacing='30px' align='center' justify='center' mt={10} >
+                {/* <Wrap spacing='30px' align='center' justify='center' mt={10} >
                     <WrapItem>
                         <Center w='180px' h='80px' bg='red.200'>
                             Box 1
                         </Center>
                     </WrapItem>
-                    <WrapItem>
-                        <Center w='180px' h='80px' bg='green.200'>
-                            Box 2
-                        </Center>
-                    </WrapItem>
-                    <WrapItem>
-                        <Center w='180px' h='80px' bg='tomato'>
-                            Box 3
-                        </Center>
-                    </WrapItem>
-                    <WrapItem>
-                        <Center w='180px' h='80px' bg='blue.200'>
-                            Box 4
-                        </Center>
-                    </WrapItem>
-                    <WrapItem>
-                        <Center w='180px' h='80px' bg='blackAlpha.500'>
-                            Box 5
-                        </Center>
-                    </WrapItem>
-                </Wrap>
+
+
+                </Wrap> */}
                 {/* </Stack> */}
                 {/* <SimpleGrid spacing={4}
                             templateColumns='repeat(auto-fill, minmax(200px, 1fr))'
@@ -185,39 +170,7 @@ export default function Dashboard() {
                         </SimpleGrid> */}
                 {/* </Stack> */}
                 {/* </HStack> */}
-                {/* <HStack height={20}
-                        // bgColor="blue.100"
-                        display={{ sm: 'flex' }}
-                        flex={1}
-                        justifyContent='space-evenly'
-                        mt={3}
-                    >
-                        <Input
-                            placeholder=' Password'
-                            rounded="4"
-                            boxShadow='outline'
-                            m="3%"
-                            height={8}
-                        />
-                        <Input
-                            placeholder=' Re-Type Password'
-                            size='sm'
-                            rounded="4"
-                            boxShadow='outline'
-                            m="3%"
-                            height={8}
 
-                        />
-                    </HStack> */}
-                {/* </Stack> */}
-
-                {/* <Text>Policy # / Prev #</Text>
-                    <Text>Named Issured</Text>
-                    <Text>Team</Text>
-                    <Text>Effective</Text>
-                    <Text>Expiration</Text>
-                    <Text>Status    </Text> */}
-                {/* <HStack   mt={20} alignContent="center" justifyContent="center"> */}
                 <VStack mt={10} >
                     <Button colorScheme='teal' w={40}> <ArrowRightIcon />  <ArrowRightIcon /></Button>
                 </VStack>

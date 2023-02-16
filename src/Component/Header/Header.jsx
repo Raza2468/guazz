@@ -16,10 +16,12 @@ import {
 } from "@chakra-ui/react";
 import { HamburgerIcon, PhoneIcon, AddIcon, WarningIcon } from "@chakra-ui/icons";
 import { Link } from "react-scroll";
+import GuapZlogo from '../../assets/GuapZlogo.png'
 import SignIn from "../CardPages/SignIn";
 import Login from "../CardPages/Login";
-import GuapZlogo from '../../assets/GuapZlogo.png'
 import Dashboard from "../Dashboard/Dashboard";
+import Portfolio from "../Poetfolio/Poetfolio";
+import TwoCards from "../TwoCards/TwoCards";
 
 
 
@@ -105,7 +107,9 @@ const Header = (props) => {
 
             {/* <SignIn /> */}
             {/* <Login /> */}
-            <Dashboard />
+            {/* <Dashboard /> */}
+            {/* <Portfolio /> */}
+            <TwoCards />
         
         </>
     );
